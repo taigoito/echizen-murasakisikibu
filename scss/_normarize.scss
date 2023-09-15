@@ -12,7 +12,7 @@ html {
   font-size: max(16px, 1.25vw);
   scroll-behavior: smooth;
 
-  @media (max-width: $breakpoint - 0.1px) {
+  @media (max-width: $breakpointSm - 0.1px) {
     font-size: 3.84vw;
   }
 }
@@ -21,7 +21,7 @@ body {
   margin: 0; // Remove the margin in all browsers
   background-color: $bodyBg;
   color: $bodyColor;
-  font-family: "游明朝", "Yu Mincho", serif;;
+  font-family: "Noto Serif JP", "游明朝", "Yu Mincho", serif;;
   -webkit-text-size-adjust: 100%; // Prevent adjustments of font size after orientation changes in iOS
 }
 
