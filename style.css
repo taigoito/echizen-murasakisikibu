@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/**
+ * Normarize
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: max(16px, 1.25vw);
+  scroll-behavior: smooth;
+}
+@media (max-width: 899.9px) {
+  html {
+    font-size: 3.84vw;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: #f1f1f7;
+  color: #000000;
+  font-family: "游明朝", "Yu Mincho", serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+figure {
+  display: block;
+  margin: 0;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
