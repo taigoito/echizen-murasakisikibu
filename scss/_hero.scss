@@ -4,7 +4,7 @@
 
 .hero {
   position: relative;
-  height: 100svh;
+  height: calc(100svh + 4.5rem);
 
   &__title {
     position: absolute;

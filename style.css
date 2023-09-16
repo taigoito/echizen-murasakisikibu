@@ -51,7 +51,7 @@ button, input, select, textarea {
  */
 .hero {
   position: relative;
-  height: 100svh;
+  height: calc(100svh + 4.5rem);
 }
 .hero__title {
   position: absolute;
@@ -140,4 +140,39 @@ button, input, select, textarea {
   border-bottom-left-radius: 50% 12rem;
   border-bottom-right-radius: 50% 12rem;
   background: url("./assets/header_main.jpg") no-repeat 62.5% 50%/cover scroll;
+}
+
+/*
+ * Intro
+ */
+.intro {
+  padding: 6rem 0;
+}
+.intro__inner {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0 3rem;
+  width: min(100%, 900px);
+  margin: auto;
+  padding: 0 clamp(12px, 2%, 18px);
+  line-height: 1.8;
+  writing-mode: vertical-rl;
+}
+.intro__heading {
+  margin: 0 0.75rem;
+  color: #7960aa;
+  letter-spacing: 0.2em;
+}
+.intro__heading strong {
+  font-size: 150%;
+}
+.intro__heading strong:nth-of-type(2) {
+  padding-top: 10.5rem;
+  font-size: 175%;
+}
+.intro__content {
+  height: 24rem;
+}
+.intro__content p {
+  margin: 0 0.75rem;
 }
