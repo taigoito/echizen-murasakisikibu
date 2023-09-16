@@ -7,9 +7,9 @@
 }
 
 %__inner {
-  width: min(100%, #{$breakpointLg});
+  width: min(100%, 62.5rem); // 1000px 左右20pxずつpaddingで、内寸960px
   margin: auto;
-  padding: 0 clamp(12px, 2%, 20px);
+  padding: 0 clamp(0.75rem, 2%, 1.25rem);
 }
 
 %__heading {

@@ -42,6 +42,15 @@ figure {
   margin: 0;
 }
 
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  text-align: left;
+}
+
 button, input, select, textarea {
   font: inherit;
 }
@@ -49,14 +58,14 @@ button, input, select, textarea {
 /*
  * Section
  */
-.news, .intro {
+.hall, .twitterArea, .news, .intro {
   padding: 3rem 0;
 }
 
-.news__inner, .intro__inner {
-  width: min(100%, 1000px);
+.hall__inner, .news__inner, .intro__inner {
+  width: min(100%, 62.5rem);
   margin: auto;
-  padding: 0 clamp(12px, 2%, 20px);
+  padding: 0 clamp(0.75rem, 2%, 1.25rem);
 }
 
 .twitterArea__heading, .news__heading {
@@ -69,7 +78,7 @@ button, input, select, textarea {
   text-align: center;
 }
 
-.news__more {
+.hall__btnDetail, .hall__btnAccess, .news__more {
   width: 13.5rem;
   height: 3.75rem;
   background-color: #000000;
@@ -77,7 +86,7 @@ button, input, select, textarea {
   line-height: 3.75rem;
   text-align: center;
 }
-.news__more:hover {
+.hall__btnDetail:hover, .hall__btnAccess:hover, .news__more:hover {
   opacity: 0.85;
 }
 
@@ -255,6 +264,7 @@ button, input, select, textarea {
 
 /*
  * Twitter Area
+ * 埋め込みサイズに合わせ、BP:lg時に単位はpx指定する
  */
 .twitterArea__container {
   position: relative;
@@ -304,5 +314,60 @@ button, input, select, textarea {
 @media (min-width: 500px) {
   .twitterArea__twitter.--sm {
     display: block;
+  }
+}
+
+/*
+ * Hall
+ */
+.hall__inner {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 3rem 6rem;
+}
+.hall__content {
+  flex: 3 1 30rem;
+  order: 1;
+}
+@media (min-width: 500px) {
+  .hall__content {
+    order: 0;
+  }
+}
+.hall__info {
+  width: 100%;
+}
+.hall__info tr {
+  border-bottom: 1px solid #cccccc;
+}
+.hall__info tr:last-child {
+  border-bottom: 0;
+}
+.hall__info th {
+  width: 6rem;
+  color: #7960aa;
+  font-weight: 400;
+}
+.hall__info th, .hall__info td {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  border: 0;
+}
+.hall__btnGroup {
+  margin: 2.25rem 0;
+  text-align: center;
+}
+.hall__btnDetail, .hall__btnAccess {
+  display: inline-block;
+  margin: 0.375rem;
+}
+.hall__image {
+  flex: 2 1 24rem;
+  order: 0;
+}
+@media (min-width: 500px) {
+  .hall__image {
+    order: 1;
   }
 }

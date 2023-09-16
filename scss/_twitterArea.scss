@@ -1,8 +1,11 @@
 /*
  * Twitter Area
+ * 埋め込みサイズに合わせ、BP:lg時に単位はpx指定する
  */
 
 .twitterArea {
+  @extend %__section;
+  
   &__container {
     position: relative;
     width: 24rem;

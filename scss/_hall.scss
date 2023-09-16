@@ -1,0 +1,68 @@
+/*
+ * Hall
+ */
+
+.hall {
+  @extend %__section;
+
+  &__inner {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 3rem 6rem;
+    @extend %__inner;
+  }
+
+  &__content {
+    flex: 3 1 30rem;
+    order: 1;
+
+    @media (min-width: $breakpointSm) {
+      order: 0;
+    }
+  }
+
+  &__info {
+    width: 100%;
+
+    tr {
+      border-bottom: 1px solid #cccccc;
+  
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    th {
+      width: 6rem;
+      color: $themeColor;
+      font-weight: 400;
+    }
+  
+    th, td {
+      padding-top: 0.625rem;
+      padding-bottom: 0.625rem;
+      border: 0; // Reset
+    }
+  }
+
+  &__btnGroup {
+    margin: 2.25rem 0;
+    text-align: center;
+  }
+
+  &__btnDetail, &__btnAccess {
+    display: inline-block;
+    @extend %__btn;
+    margin: 0.375rem;
+  }
+
+  &__image {
+    flex: 2 1 24rem;
+    order: 0;
+
+    @media (min-width: $breakpointSm) {
+      order: 1;
+    }
+  }
+}

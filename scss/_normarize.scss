@@ -41,6 +41,15 @@ figure {
   margin: 0;
 }
 
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  text-align: left;
+}
+
 button, input, select, textarea {
   font: inherit;  // Change the font styles in all browsers
 }
