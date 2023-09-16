@@ -1,0 +1,36 @@
+/*
+ * Section
+ */
+
+%__section {
+  padding: 3rem 0;
+}
+
+%__inner {
+  width: min(100%, #{$breakpointLg});
+  margin: auto;
+  padding: 0 clamp(12px, 2%, 20px);
+}
+
+%__heading {
+  width: 16.5rem;
+  height: 4.5rem;
+  margin: auto;
+  padding: 1rem;
+  background: url("./assets/dec_heading.svg") no-repeat 50% 50% / contain scroll;
+  color: $themeColor;
+  text-align: center;
+}
+
+%__btn {
+  width: 13.5rem;
+  height: 3.75rem;
+  background-color: #000000;
+  color: #ffffff;
+  line-height: 3.75rem;
+  text-align: center;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}

@@ -3,17 +3,16 @@
  */
 
 .intro {
-  padding: 6rem 0;
+  @extend %__section;
 
   &__inner {
     display: flex;
     flex-flow: column wrap;
+    justify-content: center;
     gap: 0 3rem;
-    width: min(100%, #{$breakpointMd});
-    margin: auto;
-    padding: 0 clamp(12px, 2%, 18px);
     line-height: 1.8;
     writing-mode: vertical-rl;
+    @extend %__inner;
   }
 
   &__heading {
