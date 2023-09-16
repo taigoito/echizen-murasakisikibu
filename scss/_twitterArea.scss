@@ -1,0 +1,59 @@
+/*
+ * Twitter Area
+ */
+
+.twitterArea {
+  &__container {
+    position: relative;
+    width: 24rem;
+    height: 32rem;
+    margin: auto;
+    padding: 4.5rem 0 0;
+    background: url("./assets/dec_twitter.svg") no-repeat 50% 50% / contain scroll;
+
+    @media (min-width: $breakpointSm) {
+      width: 576px;
+      height: 768px;
+      padding: 96px 0 0;
+    }
+  }
+
+  &__heading {
+    position: absolute;
+    top: -0.75rem;
+    left: 0;
+    right: 0;
+    @extend %__heading;
+
+    @media (min-width: $breakpointSm) {
+      top: -24px;
+    }
+
+    span {
+      font-size: 1rem;
+    }
+  }
+
+  &__twitter {
+    &.--xs {
+      width: 300px;
+      height: 420px;
+      margin: auto;
+
+      @media (min-width: $breakpointSm) {
+        display: none;
+      }
+    }
+
+    &.--sm {
+      display: none;
+      width: 480px;
+      height: 560px;
+      margin: auto;
+
+      @media (min-width: $breakpointSm) {
+        display: block;
+      }
+    }
+  }
+}

@@ -59,7 +59,7 @@ button, input, select, textarea {
   padding: 0 clamp(12px, 2%, 20px);
 }
 
-.news__heading {
+.twitterArea__heading, .news__heading {
   width: 16.5rem;
   height: 4.5rem;
   margin: auto;
@@ -251,4 +251,58 @@ button, input, select, textarea {
 .news__more {
   display: block;
   margin: auto;
+}
+
+/*
+ * Twitter Area
+ */
+.twitterArea__container {
+  position: relative;
+  width: 24rem;
+  height: 32rem;
+  margin: auto;
+  padding: 4.5rem 0 0;
+  background: url("./assets/dec_twitter.svg") no-repeat 50% 50%/contain scroll;
+}
+@media (min-width: 500px) {
+  .twitterArea__container {
+    width: 576px;
+    height: 768px;
+    padding: 96px 0 0;
+  }
+}
+.twitterArea__heading {
+  position: absolute;
+  top: -0.75rem;
+  left: 0;
+  right: 0;
+}
+@media (min-width: 500px) {
+  .twitterArea__heading {
+    top: -24px;
+  }
+}
+.twitterArea__heading span {
+  font-size: 1rem;
+}
+.twitterArea__twitter.--xs {
+  width: 300px;
+  height: 420px;
+  margin: auto;
+}
+@media (min-width: 500px) {
+  .twitterArea__twitter.--xs {
+    display: none;
+  }
+}
+.twitterArea__twitter.--sm {
+  display: none;
+  width: 480px;
+  height: 560px;
+  margin: auto;
+}
+@media (min-width: 500px) {
+  .twitterArea__twitter.--sm {
+    display: block;
+  }
 }
