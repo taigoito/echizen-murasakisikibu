@@ -1,0 +1,34 @@
+/*
+ * Cover
+ */
+
+body, main {
+  position: relative;
+}
+
+.cover {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+
+  &.--main {
+    top: -7.5rem;
+    background: url("./assets/bg_main_mb.png") no-repeat 50% 0% / contain scroll;
+
+    @media (min-width: $breakpointSm) {
+      background: url("./assets/bg_main.png") no-repeat 50% 0% / max(100%, 1920px) scroll;
+    }
+  }
+
+  &.--foot {
+    bottom: 0;
+    background: url("./assets/bg_footer_mb.png") no-repeat 50% 100% / contain scroll;
+
+    @media (min-width: $breakpointSm) {
+      background: url("./assets/bg_footer.png") no-repeat 50% 100% / max(100%, 1920px) scroll;
+    }
+  }
+}
