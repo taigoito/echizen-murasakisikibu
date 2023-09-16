@@ -17,7 +17,7 @@
     flex: 3 1 30rem;
     order: 1;
 
-    @media (min-width: $breakpointSm) {
+    @media (min-width: $breakpointLg) {
       order: 0;
     }
   }
@@ -44,6 +44,14 @@
       padding-bottom: 0.625rem;
       border: 0; // Reset
     }
+
+    @media (max-width: $breakpointSm - 0.1) {
+      display: block;
+
+      tr, th, td {
+        display: block;
+      }
+    }
   }
 
   &__btnGroup {
@@ -61,8 +69,17 @@
     flex: 2 1 24rem;
     order: 0;
 
-    @media (min-width: $breakpointSm) {
+    img {
+      object-fit: cover;
+      aspect-ratio: 1.33;
+    }
+
+    @media (min-width: $breakpointLg) {
       order: 1;
+
+      img {
+        aspect-ratio: 0.75;
+      }
     }
   }
 }

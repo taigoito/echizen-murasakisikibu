@@ -1,0 +1,27 @@
+/*
+ * Links
+ */
+
+.links {
+  @extend %__section;
+  
+  &__inner {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 0.75rem;
+    @extend %__inner;
+  }
+
+  &__banner {
+    flex: 0 0 48%;
+    height: 3rem;
+    background-color: #cccccc;
+    line-height: 3rem;
+    text-align: center;
+
+    @media (min-width: $breakpointLg) {
+      flex: 1 1 18%;
+    }
+  }
+}

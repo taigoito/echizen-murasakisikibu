@@ -58,17 +58,17 @@ button, input, select, textarea {
 /*
  * Section
  */
-.hall, .twitterArea, .news, .intro {
+.contact, .links, .hall, .twitterArea, .news, .intro {
   padding: 3rem 0;
 }
 
-.hall__inner, .news__inner, .intro__inner {
+.contact__inner, .links__inner, .hall__inner, .news__inner, .intro__inner {
   width: min(100%, 62.5rem);
   margin: auto;
   padding: 0 clamp(0.75rem, 2%, 1.25rem);
 }
 
-.twitterArea__heading, .news__heading {
+.contact__heading, .twitterArea__heading, .news__heading {
   width: 16.5rem;
   height: 4.5rem;
   margin: auto;
@@ -330,7 +330,7 @@ button, input, select, textarea {
   flex: 3 1 30rem;
   order: 1;
 }
-@media (min-width: 500px) {
+@media (min-width: 1000px) {
   .hall__content {
     order: 0;
   }
@@ -354,6 +354,14 @@ button, input, select, textarea {
   padding-bottom: 0.625rem;
   border: 0;
 }
+@media (max-width: 499.9px) {
+  .hall__info {
+    display: block;
+  }
+  .hall__info tr, .hall__info th, .hall__info td {
+    display: block;
+  }
+}
 .hall__btnGroup {
   margin: 2.25rem 0;
   text-align: center;
@@ -366,8 +374,56 @@ button, input, select, textarea {
   flex: 2 1 24rem;
   order: 0;
 }
-@media (min-width: 500px) {
+.hall__image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 1.33;
+}
+@media (min-width: 1000px) {
   .hall__image {
     order: 1;
   }
+  .hall__image img {
+    aspect-ratio: 0.75;
+  }
+}
+
+/*
+ * Links
+ */
+.links__inner {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+.links__banner {
+  flex: 0 0 48%;
+  height: 3rem;
+  background-color: #cccccc;
+  line-height: 3rem;
+  text-align: center;
+}
+@media (min-width: 1000px) {
+  .links__banner {
+    flex: 1 1 18%;
+  }
+}
+
+/*
+ * Contact
+ */
+.contact__inner {
+  text-align: center;
+}
+.contact address {
+  font-style: normal;
+}
+
+/*
+ * Footer
+ */
+.footer {
+  padding-bottom: 3rem;
+  text-align: center;
 }

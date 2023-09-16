@@ -1,0 +1,20 @@
+/*
+ * Contact
+ */
+
+.contact {
+  @extend %__section;
+
+  &__inner {
+    @extend %__inner;
+    text-align: center;
+  }
+
+  &__heading {
+    @extend %__heading;
+  }
+
+  address {
+    font-style: normal;
+  }
+}
