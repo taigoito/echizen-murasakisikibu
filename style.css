@@ -242,16 +242,30 @@ button, input, select, textarea {
   padding: 0;
 }
 .news__listItem {
-  padding: 1.5rem 0;
+  padding: 0.75rem 0;
   border-bottom: 1px solid #cccccc;
 }
 .news__itemDate {
   display: inline-block;
   margin-right: 0.75rem;
+  padding: 0.75rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .news__itemHeading {
   display: inline-block;
+  width: 100%;
+  padding: 0.75rem 0;
   color: #7960aa;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (min-width: 500px) {
+  .news__itemHeading {
+    width: calc(100% - 7.5rem);
+  }
 }
 .news__itemHeading:hover {
   -webkit-text-decoration: underline dotted;
@@ -460,4 +474,26 @@ body, main {
   .cover.--foot {
     background: url("./assets/bg_footer.png") no-repeat 50% 100%/max(100%, 1920px) scroll;
   }
+}
+
+/*
+ * Pagination
+ */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+.pagination__item {
+  width: 1.5rem;
+  height: 2.25rem;
+  border: 1px solid #7960aa;
+  color: #7960aa;
+  line-height: 2.25rem;
+  text-align: center;
+}
+.pagination__item.--current {
+  background-color: #7960aa;
+  color: #ffffff;
 }

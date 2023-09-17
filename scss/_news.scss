@@ -33,18 +33,31 @@
   }
 
   &__listItem {
-    padding: 1.5rem 0;
+    padding: 0.75rem 0;
     border-bottom: 1px solid #cccccc;
   }
 
   &__itemDate {
     display: inline-block;
     margin-right: 0.75rem;
+    padding: 0.75rem 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__itemHeading {
     display: inline-block;
+    width: 100%;
+    padding: 0.75rem 0;
     color: $themeColor;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media (min-width: $breakpointSm) {
+      width: calc(100% - 7.5rem);
+    }
 
     &:hover {
       text-decoration: underline dotted;
