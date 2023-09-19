@@ -15,8 +15,12 @@ body, main {
   height: 100%;
 
   &.--main {
-    top: -7.5rem;
+    top: 0;
     background: url("./assets/bg_main_mb.png") no-repeat 50% 0% / contain scroll;
+
+    @at-root .hero + main > & {
+      margin-top: -7.5rem;
+    }
 
     @media (min-width: $breakpointSm) {
       background: url("./assets/bg_main.png") no-repeat 50% 0% / max(100%, 1920px) scroll;
