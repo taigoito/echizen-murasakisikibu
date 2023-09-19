@@ -510,7 +510,7 @@ body, main {
 }
 .cover.--main {
   top: 0;
-  background: url("./assets/bg_main_mb.png") no-repeat 50% 0%/contain scroll;
+  background: url("./assets/bg_main_mb.png") no-repeat 50% 0%/100% auto scroll;
 }
 .hero + main > .cover.--main {
   margin-top: -7.5rem;
@@ -523,7 +523,7 @@ body, main {
 }
 .cover.--foot {
   bottom: 0;
-  background: url("./assets/bg_footer_mb.png") no-repeat 50% 100%/contain scroll;
+  background: url("./assets/bg_footer_mb.png") no-repeat 50% 100%/100% auto scroll;
 }
 @media (min-width: 500px) {
   .cover.--foot {
