@@ -9,8 +9,7 @@
 }
 
 html {
-  //font-size: max(14px, 1.25vw);
-  scroll-behavior: smooth;
+  font-size: clamp(14px, 1.25vw, 16px);
 
   @media (max-width: $breakpointSm - 0.1px) {
     font-size: 3.84vw;
