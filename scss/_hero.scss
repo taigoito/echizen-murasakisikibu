@@ -93,6 +93,10 @@
   }
 
   &__coverImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% + 24rem);
     height: 100%;
     margin-left: -12rem;
     margin-right: -12rem;
@@ -100,6 +104,31 @@
     padding-right: 12rem;
     border-bottom-left-radius: 50% 12rem;
     border-bottom-right-radius: 50% 12rem;
-    background: url("./assets/header_main.jpg") no-repeat 62.5% 50% / cover scroll;
+    transition: 1s linear opacity;
+
+    &.--num_1 {
+      background: url("./assets/main_00.jpg") no-repeat 62.5% 50% / cover scroll;
+    }
+
+    &.--num_2 {
+      background: url("./assets/main_01.jpg") no-repeat 62.5% 50% / cover scroll;
+    }
+
+    &.--num_3 {
+      background: url("./assets/main_02.jpg") no-repeat 62.5% 50% / cover scroll;
+    }
+
+    &.--num_4 {
+      background: url("./assets/main_03.jpg") no-repeat 50% 50% / cover scroll;
+    }
+
+    &.--num_5 {
+      background: url("./assets/main_04.jpg") no-repeat 50% 50% / cover scroll;
+    }
+    
+    &.--fade {
+      opacity: 0;
+      transition: none;
+    }
   }
 }

@@ -176,6 +176,10 @@ button, input, select, textarea {
   overflow: hidden;
 }
 .hero__coverImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% + 24rem);
   height: 100%;
   margin-left: -12rem;
   margin-right: -12rem;
@@ -183,7 +187,26 @@ button, input, select, textarea {
   padding-right: 12rem;
   border-bottom-left-radius: 50% 12rem;
   border-bottom-right-radius: 50% 12rem;
-  background: url("./assets/header_main.jpg") no-repeat 62.5% 50%/cover scroll;
+  transition: 1s linear opacity;
+}
+.hero__coverImage.--num_1 {
+  background: url("./assets/main_00.jpg") no-repeat 62.5% 50%/cover scroll;
+}
+.hero__coverImage.--num_2 {
+  background: url("./assets/main_01.jpg") no-repeat 62.5% 50%/cover scroll;
+}
+.hero__coverImage.--num_3 {
+  background: url("./assets/main_02.jpg") no-repeat 62.5% 50%/cover scroll;
+}
+.hero__coverImage.--num_4 {
+  background: url("./assets/main_03.jpg") no-repeat 50% 50%/cover scroll;
+}
+.hero__coverImage.--num_5 {
+  background: url("./assets/main_04.jpg") no-repeat 50% 50%/cover scroll;
+}
+.hero__coverImage.--fade {
+  opacity: 0;
+  transition: none;
 }
 
 /*
@@ -470,7 +493,7 @@ button, input, select, textarea {
 .links__banner {
   flex: 0 0 48%;
   height: 3rem;
-  background-color: #cccccc;
+  background-color: #ffffff;
   line-height: 3rem;
   text-align: center;
 }
@@ -478,6 +501,10 @@ button, input, select, textarea {
   .links__banner {
     flex: 1 1 18%;
   }
+}
+.links__banner img {
+  width: auto;
+  height: 100%;
 }
 
 /*

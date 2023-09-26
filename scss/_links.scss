@@ -16,12 +16,17 @@
   &__banner {
     flex: 0 0 48%;
     height: 3rem;
-    background-color: #cccccc;
+    background-color: #ffffff;
     line-height: 3rem;
     text-align: center;
 
     @media (min-width: $breakpointLg) {
       flex: 1 1 18%;
+    }
+
+    img {
+      width: auto;
+      height: 100%;
     }
   }
 }
