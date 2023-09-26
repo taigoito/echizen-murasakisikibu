@@ -104,7 +104,7 @@
     padding-right: 12rem;
     border-bottom-left-radius: 50% 12rem;
     border-bottom-right-radius: 50% 12rem;
-    transition: 1s linear opacity;
+    transition: .35s linear opacity;
 
     &.--num_1 {
       background: url("./assets/main_00.jpg") no-repeat 62.5% 50% / cover scroll;
@@ -129,6 +129,32 @@
     &.--fade {
       opacity: 0;
       transition: none;
+    }
+  }
+  
+  &__faderNav {
+    list-style: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 6rem;
+    display: flex;
+    justify-content: center;
+    height: 1rem;
+    margin: 0.75rem auto;
+    padding: 0;
+  }
+
+  &__faderNavItem {
+    width: .5rem;
+    height: .5rem;
+    margin: 0.75rem;
+    border-radius: 50%;
+    background-color: $themeColor;
+    cursor: pointer;
+
+    &:not(.--current) {
+      background-color: $bodyBg;
     }
   }
 }
