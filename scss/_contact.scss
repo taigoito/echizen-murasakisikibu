@@ -16,5 +16,10 @@
 
   address {
     font-style: normal;
+    letter-spacing: 0.05em;
+
+    a {
+      color: $themeColor;
+    }
   }
 }

@@ -566,6 +566,10 @@ button, input, select, textarea {
 }
 .contact address {
   font-style: normal;
+  letter-spacing: 0.05em;
+}
+.contact address a {
+  color: #7960aa;
 }
 
 /*
