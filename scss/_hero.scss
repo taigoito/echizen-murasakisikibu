@@ -131,23 +131,62 @@
       transition: none;
     }
   }
-  
-  &__faderNav {
-    list-style: none;
+
+  &__faderBtnGroup {
     position: absolute;
     left: 0;
     right: 0;
     bottom: 6rem;
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 1rem;
     margin: 0.75rem auto;
-    padding: 0;
+  }
+
+  &__faderPlay, &__faderStop {
+    display: inline-block;
+    width: 2.4rem;
+    height: 1.5rem;
+    border-radius: 2px;
+    background-color: $themeColor;
+    color: $bodyBg;
+    text-align: center;
+
+    &::before {
+      display: inline-block;
+      width: 0.625rem;
+      height: 0.625rem;
+    }
+
+    &.--hide {
+      display: none;
+    }
+  }
+
+  &__faderPlay {
+    &::before {
+      content: url("./assets/icon_play.svg");
+    }
+  }
+  
+  &__faderStop {
+    &::before {
+      content: url("./assets/icon_stop.svg");
+    }
+
+  }
+  
+  &__faderNav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-left: 0.75rem;
   }
 
   &__faderNavItem {
-    width: .5rem;
-    height: .5rem;
+    width: 0.5rem;
+    height: 0.5rem;
     margin: 0.75rem;
     border-radius: 50%;
     background-color: $themeColor;

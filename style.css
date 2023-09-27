@@ -208,17 +208,45 @@ button, input, select, textarea {
   opacity: 0;
   transition: none;
 }
-.hero__faderNav {
-  list-style: none;
+.hero__faderBtnGroup {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 6rem;
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 1rem;
   margin: 0.75rem auto;
-  padding: 0;
+}
+.hero__faderPlay, .hero__faderStop {
+  display: inline-block;
+  width: 2.4rem;
+  height: 1.5rem;
+  border-radius: 2px;
+  background-color: #7960aa;
+  color: #f1f1f7;
+  text-align: center;
+}
+.hero__faderPlay::before, .hero__faderStop::before {
+  display: inline-block;
+  width: 0.625rem;
+  height: 0.625rem;
+}
+.hero__faderPlay.--hide, .hero__faderStop.--hide {
+  display: none;
+}
+.hero__faderPlay::before {
+  content: url("./assets/icon_play.svg");
+}
+.hero__faderStop::before {
+  content: url("./assets/icon_stop.svg");
+}
+.hero__faderNav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding-left: 0.75rem;
 }
 .hero__faderNavItem {
   width: 0.5rem;

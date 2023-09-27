@@ -52,6 +52,16 @@ export default class Fader {
 
 
   _setupNavs() {
+    // .hero__faderBtnGroup
+    this._btnGroup = document.createElement('div');
+    this._btnGroup.classList.add('hero__faderBtnGroup');
+
+    // .hero__faderPlay, .hero__faderStop
+    this._play = document.createElement('span');
+    this._play.classList.add('hero__faderPlay', '--hide');
+    this._stop = document.createElement('span');
+    this._stop.classList.add('hero__faderStop');
+
     // .hero__faderNav
     this._nav = document.createElement('ul');
     this._nav.classList.add('hero__faderNav');
@@ -69,7 +79,10 @@ export default class Fader {
     this._navItems = this._nav.children;
     this._navItems[this._currentIndex].classList.add('--current');
 
-    this._elem.after(this._nav);
+    this._btnGroup.appendChild(this._play);
+    this._btnGroup.appendChild(this._stop);
+    this._btnGroup.appendChild(this._nav);
+    this._elem.after(this._btnGroup);
 
     this._handleEvents();
 
@@ -77,6 +90,20 @@ export default class Fader {
 
 
   _handleEvents() {
+    // 再生
+    this._play.addEventListener('click', () => {
+      this.startInterval();
+      this._play.classList.add('--hide');
+      this._stop.classList.remove('--hide');
+    });
+
+    // 停止
+    this._stop.addEventListener('click', () => {
+      this.stopInterval();
+      this._play.classList.remove('--hide');
+      this._stop.classList.add('--hide');
+    });
+
     // ナビゲーション操作
     this._nav.addEventListener('click', (event) => {
       const target = event.target;
