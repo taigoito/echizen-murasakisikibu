@@ -4,8 +4,7 @@
 
 .hero {
   position: relative;
-  height: calc(100svh + 7.5rem);
-  padding-bottom: 3rem;
+  height: 100svh;
 
   &__title {
     position: absolute;
@@ -47,7 +46,7 @@
     justify-content: center;
     align-items: flex-end;
     height: 100%;
-    padding-bottom: 7.5rem;
+    padding-bottom: 6.75rem;
   }
 
   &__menu {
@@ -88,7 +87,7 @@
     left: 0;
     z-index: -1;
     width: 100%;
-    height: calc(100% - 3rem);
+    height: 100%;
     overflow: hidden;
   }
 
@@ -136,7 +135,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 6rem;
+    bottom: 2.25rem;
     display: flex;
     justify-content: center;
     align-items: center;

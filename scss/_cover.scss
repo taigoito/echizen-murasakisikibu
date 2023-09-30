@@ -19,7 +19,7 @@ body, main {
     background: url("./assets/bg_main_mb.png") no-repeat 50% 0% / 100% auto scroll;
 
     @at-root .hero + main > & {
-      margin-top: -7.5rem;
+      margin-top: -4.5rem;
     }
 
     @media (min-width: $breakpointSm) {
