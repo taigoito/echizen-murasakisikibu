@@ -443,8 +443,9 @@ button, input, select, textarea {
 }
 .twitterArea__twitter.--xs {
   width: 300px;
-  height: 420px;
+  height: 360px;
   margin: auto;
+  overflow: hidden;
 }
 @media (min-width: 500px) {
   .twitterArea__twitter.--xs {
@@ -454,8 +455,9 @@ button, input, select, textarea {
 .twitterArea__twitter.--sm {
   display: none;
   width: 480px;
-  height: 560px;
+  height: 576px;
   margin: auto;
+  overflow: hidden;
 }
 @media (min-width: 500px) {
   .twitterArea__twitter.--sm {
