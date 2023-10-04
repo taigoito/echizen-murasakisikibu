@@ -589,6 +589,7 @@ button, input, select, textarea {
  */
 body, main {
   position: relative;
+  min-height: 100vh;
 }
 
 .cover {
